@@ -5,7 +5,7 @@ const CALL_MESSAGE = 'Hello World!';
 const OUTPUT_TXT_PATH = './outputs/output.txt';
 
 const callLog = (message) => {
-  console.log(message);
+  console.log(`Message: ${message}`);
 };
 
 module.exports = {
