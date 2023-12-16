@@ -1,4 +1,8 @@
-const { OUTPUT_TXT_PATH, CALL_MESSAGE } = require('./modules/variableDefine');
+const {
+  OUTPUT_TXT_PATH,
+  CALL_MESSAGE,
+  person,
+} = require('./modules/variableDefine');
 const { readFile, writeFile, callError } = require('./modules/functionDefine');
 
 // コマンドライン引数
