@@ -27,7 +27,6 @@ app.get('/', (_, res) => {
 app.get('/about', (_, res) => {
   readJson(OUTPUT_JSON_PATH)
     .then((jsonMessage) => {
-      console.log(jsonMessage);
       res.send(jsonMessage);
     })
     .catch((error) => {
