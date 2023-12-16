@@ -1,8 +1,4 @@
-const ONE_SECOND = require('./modules/define');
-
-const callLog = (message) => {
-  console.log(message);
-};
+const { ONE_SECOND, callLog } = require('./modules/define');
 
 const loopCallLog = (count, message) => {
   Array(count)
