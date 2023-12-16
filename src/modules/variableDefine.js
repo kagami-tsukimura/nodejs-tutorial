@@ -10,6 +10,13 @@ const person = {
   age: 28,
 };
 
+const args = {
+  read: 'read',
+  write: 'write',
+  readJson: 'readJson',
+  writeJson: 'writeJson',
+};
+
 module.exports = {
   ONE_SECOND,
   LOOP_COUNT,
@@ -17,4 +24,5 @@ module.exports = {
   OUTPUT_TXT_PATH,
   OUTPUT_JSON_PATH,
   person,
+  args,
 };
