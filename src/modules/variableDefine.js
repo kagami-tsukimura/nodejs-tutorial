@@ -3,6 +3,7 @@ const LOOP_COUNT = 3;
 const CALL_MESSAGE = 'Hello World!';
 
 const OUTPUT_TXT_PATH = './outputs/output.txt';
+const OUTPUT_JSON_PATH = './outputs/output.json';
 
 const person = {
   name: 'Kagami',
@@ -14,5 +15,6 @@ module.exports = {
   LOOP_COUNT,
   CALL_MESSAGE,
   OUTPUT_TXT_PATH,
+  OUTPUT_JSON_PATH,
   person,
 };
