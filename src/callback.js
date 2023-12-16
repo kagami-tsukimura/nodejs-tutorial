@@ -1,4 +1,9 @@
-const { ONE_SECOND, callLog } = require('./modules/define');
+const {
+  ONE_SECOND,
+  LOOP_COUNT,
+  CALL_MESSAGE,
+  callLog,
+} = require('./modules/define');
 
 const loopCallLog = (count, message) => {
   Array(count)
@@ -7,5 +12,5 @@ const loopCallLog = (count, message) => {
 };
 
 setTimeout(function () {
-  loopCallLog(3, 'Hello World');
+  loopCallLog(LOOP_COUNT, CALL_MESSAGE);
 }, ONE_SECOND);
