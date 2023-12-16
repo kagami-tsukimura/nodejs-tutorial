@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/', function (_, res) {
+app.get('/', (_, res) => {
   res.send('Hello World!');
 });
 
