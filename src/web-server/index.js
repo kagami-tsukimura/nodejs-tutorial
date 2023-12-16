@@ -9,4 +9,8 @@ app.get('/about', (_, res) => {
   res.send('About Page!');
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log('Express Running...');
+});
+
+console.log('Last');
