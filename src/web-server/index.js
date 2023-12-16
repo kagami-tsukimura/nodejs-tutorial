@@ -12,5 +12,3 @@ app.get('/about', (_, res) => {
 app.listen(3000, () => {
   console.log('Express Running...');
 });
-
-console.log('Last');
