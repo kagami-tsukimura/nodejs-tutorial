@@ -1,6 +1,11 @@
 const fs = require('fs');
+
 const callLog = (message) => {
   console.log(`Message: ${message}`);
+};
+
+const callError = (message) => {
+  console.error(`Error: ${message}`);
 };
 
 // ファイル書き込み
@@ -20,6 +25,7 @@ const readFile = (outputTxtPath) => {
 
 module.exports = {
   callLog,
+  callError,
   writeFile,
   readFile,
 };
