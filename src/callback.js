@@ -1,4 +1,4 @@
-const ONE_SECOND = 1000;
+const ONE_SECOND = require('./modules/define');
 
 const callLog = (message) => {
   console.log(message);
