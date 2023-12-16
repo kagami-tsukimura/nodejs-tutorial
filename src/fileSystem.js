@@ -1,13 +1,11 @@
-const fs = require('fs');
-const { OUTPUT_TXT_PATH, CALL_MESSAGE, callLog } = require('./modules/define');
+const { OUTPUT_TXT_PATH, CALL_MESSAGE } = require('./modules/variableDefine');
+const { callLog, writeFile, readFile } = require('./modules/functionDefine');
 
-// ファイル書き込み
-fs.writeFile(OUTPUT_TXT_PATH, CALL_MESSAGE, () => {
-  callLog('Write Done!');
-});
+// コマンドライン引数
+const request = process.argv[2];
 
-// writeFileを読み込み
-fs.readFile(OUTPUT_TXT_PATH, (_, data) => {
-  callLog(data);
-  callLog('Read Done!');
-});
+request === 'read'
+  ? readFile(OUTPUT_TXT_PATH)
+  : request === 'write'
+  ? writeFile(OUTPUT_TXT_PATH, CALL_MESSAGE)
+  : callLog('Specify [read] or [write] for the command line argument.');

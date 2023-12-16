@@ -1,6 +1,4 @@
-const callLog = (message) => {
-  console.log(message);
-};
+const { callLog } = require('./modules/functionDefine');
 
 Array(3)
   .fill()
