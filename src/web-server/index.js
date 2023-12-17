@@ -31,7 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.post('/v1/quiz', (req, res) => {
   const correctAnswer = 'flipper';
   const answer = req.body.answer && req.body.answer.toLowerCase();
-  answer === correctAnswer ? res.send('Correct!') : res.send('Incorrect.');
+  answer === correctAnswer
+    ? res.send(h1Send('Correct!'))
+    : res.send(h1Send('Incorrect.'));
 });
 
 app.get('/v1/about', (_, res) => {
