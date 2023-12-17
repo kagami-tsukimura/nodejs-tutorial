@@ -1,8 +1,9 @@
 // Express Server
 const express = require('express');
-const app = express();
-
+const path = require('path');
 const fs = require('fs').promises;
+
+const app = express();
 
 const OUTPUT_JSON_PATH = './json/about.json';
 
@@ -19,6 +20,8 @@ const readJson = (outputJsonPath) => {
       return 'Json Not Found...';
     });
 };
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (_, res) => {
   res.send(h1Send('Top Page!'));
