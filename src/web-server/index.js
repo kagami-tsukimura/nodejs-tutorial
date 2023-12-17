@@ -23,9 +23,9 @@ const readJson = (outputJsonPath) => {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (_, res) => {
-  res.send(h1Send('Top Page!'));
-});
+// app.get('/', (_, res) => {
+//   res.send(h1Send('Top Page!'));
+// });
 
 app.get('/about', (_, res) => {
   readJson(OUTPUT_JSON_PATH)
