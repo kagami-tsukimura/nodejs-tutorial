@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //   res.send(h1Send('Top Page!'));
 // });
 
-app.get('/about', (_, res) => {
+app.get('/v1/about', (_, res) => {
   readJson(OUTPUT_JSON_PATH)
     .then((jsonMessage) => {
       res.send(jsonMessage);
