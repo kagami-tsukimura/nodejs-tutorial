@@ -32,8 +32,8 @@ app.post('/v1/quiz', (req, res) => {
   const correctAnswer = 'flipper';
   const answer = req.body.answer && req.body.answer.toLowerCase();
   answer === correctAnswer
-    ? res.send(h1Send('Correct!'))
-    : res.send(h1Send('Incorrect.'));
+    ? res.redirect('/correct.html')
+    : res.redirect('/incorrect.html');
 });
 
 app.get('/v1/about', (_, res) => {
