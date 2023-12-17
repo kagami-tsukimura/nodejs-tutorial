@@ -10,3 +10,15 @@ img {
   height: 30%;
   width: 30%;
 }
+
+input {
+  padding: 0.4rem;
+  border-radius: 0.2rem solid gray;
+}
+
+button {
+  padding: 0.4rem;
+  margin-left: 0.1rem;
+  border-radius: 0.2rem solid gray;
+  background-color: chartreuse;
+}
