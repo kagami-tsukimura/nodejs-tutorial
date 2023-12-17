@@ -1,1 +1,2 @@
-/src/outputs/*.*
+# node_modules
+/src/web-server/node_modules
