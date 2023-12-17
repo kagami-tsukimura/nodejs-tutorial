@@ -1,8 +1,9 @@
 // Express Server
 const express = require('express');
-const app = express();
-
+const path = require('path');
 const fs = require('fs').promises;
+
+const app = express();
 
 const OUTPUT_JSON_PATH = './json/about.json';
 
@@ -20,11 +21,22 @@ const readJson = (outputJsonPath) => {
     });
 };
 
-app.get('/', (_, res) => {
-  res.send(h1Send('Top Page!'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// app.get('/', (_, res) => {
+//   res.send(h1Send('Top Page!'));
+// });
+
+app.post('/v1/quiz', (req, res) => {
+  const correctAnswer = 'flipper';
+  const answer = req.body.answer && req.body.answer.toLowerCase();
+  answer === correctAnswer
+    ? res.redirect('/correct.html')
+    : res.redirect('/incorrect.html');
 });
 
-app.get('/about', (_, res) => {
+app.get('/v1/about', (_, res) => {
   readJson(OUTPUT_JSON_PATH)
     .then((jsonMessage) => {
       res.send(jsonMessage);
