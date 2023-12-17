@@ -7,8 +7,12 @@
   <body>
     <h1>Question:</h1>
     <h2>What do you call the penguin wings?</h2>
-    <form>
-      <input type="text" name="answer" /><button type="submit">Submit</button>
+    <form action="/v1/quiz" method="post">
+      <input
+        type="text"
+        placeholder="answer in english..."
+        name="answer"
+      /><button type="submit">Submit</button>
     </form>
   </body>
 </html>

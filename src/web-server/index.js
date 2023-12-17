@@ -21,11 +21,18 @@ const readJson = (outputJsonPath) => {
     });
 };
 
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.get('/', (_, res) => {
 //   res.send(h1Send('Top Page!'));
 // });
+
+app.post('/v1/quiz', (req, res) => {
+  const correctAnswer = 'flipper';
+  const answer = req.body.answer && req.body.answer.toLowerCase();
+  answer === correctAnswer ? res.send('Correct!') : res.send('Incorrect.');
+});
 
 app.get('/v1/about', (_, res) => {
   readJson(OUTPUT_JSON_PATH)
